@@ -5,8 +5,16 @@ import { Book } from './models/bookModel.js'
 import booksRoute from './routes/bookRoute.js'
 
 const app = express();
+
+
 // Middleware for parsing requst body
 app.use(express.json());
+
+// app.use(cors({
+//     origin: 'http://localhost:3000',
+//     method: ['GET','POST','PUT','DELETE'],
+//     allowedHeaders: ['Content-Type'],
+// }))
 
 app.get('/',(request,response)=>{
     console.log(request)
